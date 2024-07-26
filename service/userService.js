@@ -1,15 +1,10 @@
 'use strict'
 
+const userData = {}
 
-const user = {
-    email : '',
-    txtColor : '',
-    bgColor : '',
-    Age : '',
-    birthDate: '',
-    birthTime: ''
+function showAge(newVal) {
+    document.getElementById("sAge").innerHTML = newVal
 }
-
 
 function save(userData) {
     saveToStorage('userPreferences', userData)
@@ -17,8 +12,4 @@ function save(userData) {
 
 function load() {
     return loadFromStorage('userPreferences') || {}
-}
-
-function showAge(newVal) {
-    document.getElementById("sAge").innerHTML = newVal
 }

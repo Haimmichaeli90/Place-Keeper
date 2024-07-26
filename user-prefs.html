@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Preferences</title>
+    <title>User Settings</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="onInit()">
@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="user-prefs.html">User Preferences</a></li>
+                <li><a href="user-prefs.html">User Settings</a></li>
                 <li><a href="map.html">Map</a></li>
             </ul>
         </nav>
@@ -19,7 +19,7 @@
     
     <main>
         <section id="preferences">
-            <h1>User Preferences</h1>
+            <h1>User Settings</h1>
             <form id="frmRegister" onsubmit="onSubmit(event)">
                 <div class="form-group">
                     <label for="email">E-mail:</label>
@@ -58,6 +58,11 @@
 
     <script src="service/storage.service.js"></script>
     <script src="service/userService.js"></script>
+    <script src="service/placeService.js"></script>
     <script src="js/controller.js"></script>
+
+    <footer>
+        <p>© 2024 Haim Michaeli. All rights reserved.</p>
+    </footer>
 </body>
 </html>
