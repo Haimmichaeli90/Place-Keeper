@@ -1,8 +1,13 @@
 'use strict'
 
+const userData = {}
 
 function onInit(){
  
+}
+
+function showAge(newVal) {
+    document.getElementById("sAge").innerHTML = newVal
 }
 
 function onSubmit(event) {

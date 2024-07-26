@@ -176,3 +176,50 @@ button:hover {
     align-items: center;
     margin-left: 17%;
 }
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .form-group label,
+    .form-group input[type="email"],
+    .form-group input[type="range"],
+    .form-group input[type="date"],
+    .form-group input[type="color"] {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .form-group input[type="range"] {
+        width: calc(100% - 40px);
+    }
+
+    .video-container iframe {
+        margin: 0 auto;
+    }
+
+    button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #info h2 {
+        font-size: 1.5em;
+    }
+
+    #info p {
+        font-size: 1em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+}
