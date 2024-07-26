@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawaii Place Keeper</title>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3S5vDoLz09rLdoFEBrASgHEQsUwoo8LI&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="onInit()">
@@ -16,6 +18,11 @@
             </ul>
         </nav>
     </header>
+    <div id="map-container">
+        <gmp-map center="29.550360,34.952278" zoom="8" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="29.550360,34.952278" title="My location"></gmp-advanced-marker>
+        </gmp-map>
+    </div>
     <script src="service/userService.js"></script>
     <script src="service/placeService.js"></script>
     <script src="js/controller.js"></script>
@@ -25,3 +32,6 @@
     </footer>
 </body>
 </html>
+
+
+<!-- AIzaSyC3S5vDoLz09rLdoFEBrASgHEQsUwoo8LI  my API KEY -->

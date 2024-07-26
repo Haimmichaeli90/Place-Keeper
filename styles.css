@@ -121,7 +121,8 @@ main {
 .form-group input[type="email"],
 .form-group input[type="range"],
 .form-group input[type="date"],
-.form-group input[type="color"] {
+.form-group input[type="color"],
+.form-group input[list="genders"] {
     margin-left: 40%;
     width: 20%;
     padding: 8px;
@@ -175,6 +176,17 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin-left: 17%;
+}
+
+#map-container {
+    width: 80%;
+    max-width: 600px;
+    height: 600px;
+    margin-left: 30%;
+    margin-top: 10%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 
