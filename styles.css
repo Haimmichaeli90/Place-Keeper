@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -40,21 +39,19 @@ main {
 }
 
 #hero {
-    background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 5% 20px;
 }
 
-.hero-content {
+/* .hero-content {
     max-width: 600px;
     margin: 0 auto;
-}
+} */
 
-#hero h1 {
+/* #hero h1 {
     font-size: 3em;
     margin: 0;
-}
+} */
 
 #hero p {
     font-size: 1.2em;
@@ -76,6 +73,7 @@ main {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 90px;
 }
 
 footer {
@@ -88,56 +86,12 @@ footer {
     width: 100%;
 }
 
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff9800;
-}
-
 main {
     padding: 20px;
     max-width: 900px;
     margin: 20px auto;
 }
 
-#preferences {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 #preferences h1 {
     font-size: 2em;
@@ -193,21 +147,13 @@ button:hover {
     background-color: #e68900;
 }
 
-
-
-
 .hero-content {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    /* text-align: center; */
     z-index: 2; 
-    /* Ensure the text is on top of the video */
-    /* background: rgba(0, 0, 0, 0.5);  */
-    /* padding: 3px; */
-    /* border-radius: 8px; */
 }
 
 .video-container iframe {
