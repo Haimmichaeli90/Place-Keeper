@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="onInit()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-prefs.html">User Preferences</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="preferences">
+            <h1>User Preferences</h1>
+            <form id="frmRegister" onsubmit="onSubmit(event)">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="age">Your Age:</label>
+                    <input
+                        type="range"
+                        id="age"
+                        name="age"
+                        step="1"
+                        min="18"
+                        max="120"
+                        value="18"
+                        oninput="showAge(this.value)"
+                    />
+                    <span id="sAge">18</span>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="form-group">
+                    <label for="txtColor">Text Color:</label>
+                    <input type="color" id="txtColor" name="txtColor">
+                </div>
+                <div class="form-group">
+                    <label for="bgColor">Background Color:</label>
+                    <input type="color" id="bgColor" name="bgColor">
+                </div>
+                <button type="submit">Save Preferences</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="service/storage.service.js"></script>
+    <script src="service/userService.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
