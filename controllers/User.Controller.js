@@ -19,11 +19,8 @@ function onSubmit(event) {
     userData.gender = document.getElementById('gender').value
     userData.txtColor = document.getElementById('txtColor').value
     userData.bgColor = document.getElementById('bgColor').value
-    userData.initialZoom = document.getElementById('initialZoom').value
-    userData.initialLocationLat = document.getElementById('initialLocationLat').value
-    userData.initialLocationLng = document.getElementById('initialLocationLng').value
 
-    save(userData)
+    saveToStorage('userPreferences', userData)
     
     document.body.style.backgroundColor = userData.bgColor
     document.body.style.color = userData.txtColor
@@ -31,9 +28,3 @@ function onSubmit(event) {
     
 }
 
-
-// function validateAgeWithBirthDate(age,dob){
-//     const birthYear = new Date(dob).getFullYear()
-//     const currentYear = new Date().getFullYear()
-//     return (currentYear - birthYear) == age
-// }

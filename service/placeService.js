@@ -1,33 +1,35 @@
 'use strict'
 
-const places = loadPlaces()
-
-function addPlace(place) {
-    places.push(place)
-    savePlaces()
+function getPlaces() {
+    return [...places]
 }
 
 function removePlace(placeId) {
-    const placeIndex = places.findIndex(place => place.id === placeId)
-    if (placeIndex > -1) {
-        places.splice(placeIndex, 1)
-        savePlaces()
+    const index = places.findIndex(place => place.id === placeId)
+    if (index > -1) {
+        places.splice(index, 1)
     }
 }
 
-function getPlaces() {
-    return places
+function addPlace(name, lat, lng) {
+    const id = (Math.random() + 1).toString(36).substring(7)
+    const newPlace = _createPlace(name, lat, lng)
+    places.push(newPlace)
 }
 
-function loadPlaces() {
-    return loadFromStorage('places') || []
+function getPlaceById(placeId) {
+    return places.find(place => place.id === placeId)
 }
 
-function savePlaces() {
-    saveToStorage('places', places)
+
+
+function _createPlace(name, lat, lng) {
+    return { id: (Math.random() + 1).toString(36).substring(7), lat, lng, name }
 }
 
-function createPlace(id, lat, lng, name) {
-    return { id, lat, lng, name }
+function _createPlaces() {
+    return [
+        _createPlace('Pukis house', 32.1416, 34.831213),
+        _createPlace('Another place', 31.1416, 35.831213)
+    ]
 }
-

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawaii Place Keeper</title>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3S5vDoLz09rLdoFEBrASgHEQsUwoo8LI&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3S5vDoLz09rLdoFEBrASgHEQsUwoo8LI&callback=onInit&libraries=maps,marker&v=beta"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="onInit()">
@@ -18,20 +17,27 @@
             </ul>
         </nav>
     </header>
-    <div id="map-container">
-        <gmp-map center="29.550360,34.952278" zoom="8" map-id="DEMO_MAP_ID">
-            <gmp-advanced-marker position="29.550360,34.952278" title="My location"></gmp-advanced-marker>
-        </gmp-map>
-    </div>
-    <script src="service/userService.js"></script>
-    <script src="service/placeService.js"></script>
-    <script src="js/controller.js"></script>
+    <main>
+        <label>
+            <input type="checkbox" id="show-places-list" onchange="togglePlacesList()"> Show Places List
+        </label>
 
+        <div id="places-dialog" class="dialog">
+            <div class="dialog-content">
+                <span class="close" onclick="closePlacesList()">&times;</span>
+                <div id="places-list">
+                </div>
+            </div>
+        </div>
+        
+        <div id="map-container" style="width: 100%; height: 500px;">
+            <!-- Map will be initialized here -->
+        </div>
+    </main>
     <footer>
         <p>© 2024 Haim Michaeli. All rights reserved.</p>
     </footer>
+    <script src="service/placeService.js"></script>
+    <script src="controllers/place.controller.js"></script>
 </body>
 </html>
-
-
-<!-- AIzaSyC3S5vDoLz09rLdoFEBrASgHEQsUwoo8LI  my API KEY -->
