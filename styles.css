@@ -121,6 +121,7 @@ main {
 .form-group input[type="email"],
 .form-group input[type="range"],
 .form-group input[type="date"],
+.form-group input[type="time"],
 .form-group input[type="color"],
 .form-group input[list="genders"] {
     margin-left: 40%;
